@@ -39,6 +39,11 @@ function generatePassword() {
       console.log(tempPW);
     }
     
+    if(tempPW.length===0){
+    alert("No characters have been selected. Please click Generate Password to try again.");
+      return"";
+    }
+
     console.log(tempPW);
 
     //for loop to pick a random character 
@@ -54,7 +59,7 @@ function generatePassword() {
   }
   //spiting out invalid inputs
   else{ 
-    alert("Incorrect input. Please Pick a number between 8-128");
+    alert("Incorrect input. Please Pick a number between 8-128. Please click Generate Password to try again");
     return"";
   } 
   

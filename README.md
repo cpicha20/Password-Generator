@@ -16,3 +16,4 @@ This project was to familiarize myself with javascript by making a random passwo
 
 ![Preview](/assets/images/Screenshot%202023-09-28%20212547.png)
 
+g
