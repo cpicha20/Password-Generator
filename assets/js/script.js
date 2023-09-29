@@ -7,37 +7,41 @@ let numbersArr = ['1','2','3','4','5','6','7','8','9','0'];
 let specialArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
 
-
-//
+//the function to create a password
 function generatePassword() {
   var arrLength = prompt("How many characters long would you like your password to be? (Please pick a number between 8-128)");
   var tempPW = [];
   var userPW = [];
+  //Checking to see if number value is valid
   if(arrLength>=8 && arrLength<=128)
   {
-    
-    if(confirm("uppercase?")){
+    //Check to see if they want Uppercase letters
+    if(confirm("Would you like to add uppercase letters to your password?")){
       tempPW=tempPW.concat(upperCase);
       console.log(tempPW);
     }
 
-    if(confirm("lower?")){
+    //Check to see if they want Lowercase letters
+    if(confirm("Would you like to add lower letters to your password?")){
       tempPW=tempPW.concat(lowerCase);
       console.log(tempPW);
     }
 
-    if(confirm("numbers?")){
+    //Check to see if they want Numbers
+    if(confirm("Would you like to add numbers to your password?")){
       tempPW=tempPW.concat(numbersArr);
       console.log(tempPW);
     }
 
-    if(confirm("special?")){
+    //Check to see if they want Special
+    if(confirm("Would you like to add special character to your password?")){
       tempPW=tempPW.concat(specialArr);
       console.log(tempPW);
     }
     
     console.log(tempPW);
-    
+
+    //for loop to pick a random character 
     for (let index = 0; index < arrLength; index++) {
     
       rndPick = tempPW[Math.floor(Math.random() * tempPW.length)];
@@ -48,13 +52,13 @@ function generatePassword() {
   return userPW;
     
   }
+  //spiting out invalid inputs
   else{ 
     alert("Incorrect input. Please Pick a number between 8-128");
     return"";
   } 
   
 }
-
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
